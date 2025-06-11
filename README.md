@@ -60,9 +60,9 @@ LOG_PATH = "/var/log/auth.log"  # Path to the SSH log file
 
 ```bash
 [*] Monitoring SSH logs...
-[DEBUG] Failed password for invalid user hacker from 192.168.0.101 port 60234 ssh2
-[!] ALERT: 192.168.0.101 exceeded threshold of failed SSH login attempts!
-[+] Blocked IP: 192.168.0.101 with iptables
+[DEBUG] Failed password for invalid user hacker from 127.0.0.1 port 44934 ssh2
+[!] ALERT: 127.0.0.1 exceeded threshold of failed SSH login attempts!
+[+] Blocked IP: 127.0.0.1 with iptables
 ```
 
 ## Disclaimer
