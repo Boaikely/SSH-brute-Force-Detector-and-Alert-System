@@ -52,7 +52,7 @@ You can customize the following variables in `detector.py`:
 
 ```python
 THRESHOLD = 3         # Number of failed attempts before triggering an alert
-TIME_WINDOW = 10      # Time window in seconds to observe repeated attempts
+TIME_WINDOW = 100      # Time window in seconds to observe repeated attempts
 LOG_PATH = "/var/log/auth.log"  # Path to the SSH log file
 ```
 
