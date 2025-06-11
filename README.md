@@ -64,6 +64,7 @@ LOG_PATH = "/var/log/auth.log"  # Path to the SSH log file
 [!] ALERT: 127.0.0.1 exceeded threshold of failed SSH login attempts!
 [+] Blocked IP: 127.0.0.1 with iptables
 ```
+Note: For local testing, the IP address will be 127.0.0.1 (localhost). For real-world attacks, it will show the attacher's IP.
 
 ## Disclaimer
 
