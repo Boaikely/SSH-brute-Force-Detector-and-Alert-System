@@ -8,6 +8,7 @@ A Python-based real-time SSH brute-force attack detector and blocker. It monitor
 - Configurable threshold and time window
 - IP blocking via `iptables`
 - Logs alerts to a local file (`alerts.log`)
+- Optional email alerts (configure SMTP settings in 'detector.py')
 - Easy to customize and extend
 
 ## Requirements
@@ -16,6 +17,7 @@ A Python-based real-time SSH brute-force attack detector and blocker. It monitor
 - Python 3.6+
 - `watchdog` library
 - `iptables` installed and enabled
+- (Optional) SMTP server for email alerts
 
 ## Installation
 
@@ -45,6 +47,7 @@ The script will continuously monitor `/var/log/auth.log` for failed SSH login at
 - Printed on the terminal
 - Logged in `alerts.log`
 - Blocked using `iptables`
+- (Optional) Sent as an email alert if configured
 
 ## Configuration
 
@@ -55,6 +58,15 @@ THRESHOLD = 3         # Number of failed attempts before triggering an alert
 TIME_WINDOW = 100      # Time window in seconds to observe repeated attempts
 LOG_PATH = "/var/log/auth.log"  # Path to the SSH log file
 ```
+## Email alert setting (disabled by default)
+
+EMAIL_ALERTS_ENABLED = False
+SMTP_SERVER = "smtp.example.com"
+SMTP_PORT = 587
+EMAIL_USERNAME = "your_email@example.com"
+EMAIL_PASSWORD = "your_password"
+EMAIL_FROM = "your_email@example.com"
+EMAIL_TO = "admin@example.com"
 
 ## Sample Output
 
@@ -63,8 +75,9 @@ LOG_PATH = "/var/log/auth.log"  # Path to the SSH log file
 [DEBUG] Failed password for invalid user hacker from 127.0.0.1 port 44934 ssh2
 [!] ALERT: 127.0.0.1 exceeded threshold of failed SSH login attempts!
 [+] Blocked IP: 127.0.0.1 with iptables
+[+] Email alert sent for 127.0.0.1
+
 ```
-Note: For local testing, the IP address will be 127.0.0.1 (localhost). For real-world attacks, it will show the attacher's IP.
 
 ## Disclaimer
 
