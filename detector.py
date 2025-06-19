@@ -12,7 +12,7 @@ ALERT_LOG_FILE = "alerts.log"
 
 # Alert threshold: 3 failed attempts in 10 seconds
 THRESHOLD = 3
-TIME_WINDOW = 10  # in seconds
+TIME_WINDOW = 100  # in seconds
 
 # Dictionary to store IP and list of timestamps of failed attempts
 ip_attempts = defaultdict(list)
