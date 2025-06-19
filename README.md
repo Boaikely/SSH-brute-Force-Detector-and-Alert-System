@@ -89,5 +89,5 @@ MIT License
 
 ---
 
-**Author:** Aina Andrian  
+**Author:** Boaikely  
 **GitHub:** [Boaikely](https://github.com/Boaikely)
